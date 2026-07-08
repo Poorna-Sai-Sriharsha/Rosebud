@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
     const orderId = `RB-${Date.now()}-${uuidv4().slice(0, 6).toUpperCase()}`;
 
     // Verify user exists in the ephemeral SQLite DB to prevent Foreign Key constraint errors caused by stale cookies from previous Vercel builds
-    let validUserId = session?.user?.id;
+    let validUserId: string | undefined = session?.user?.id;
     if (validUserId) {
       try {
         const userExists = await prisma.user.findUnique({ where: { id: validUserId } });
