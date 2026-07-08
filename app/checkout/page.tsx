@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -45,15 +45,18 @@ export default function CheckoutPage() {
   const [paymentError, setPaymentError] = useState('');
   const [orderPlaced, setOrderPlaced] = useState(false);
 
+  const hasPrefilled = useRef(false);
+
   // Pre-fill contact details from session on mount
   useEffect(() => {
-    if (session?.user) {
+    if (session?.user && !hasPrefilled.current) {
       setAddress((prev) => ({
         ...prev,
         email: session.user.email ?? prev.email,
         firstName: session.user.name?.split(' ')[0] ?? prev.firstName,
         lastName: session.user.name?.split(' ').slice(1).join(' ') ?? prev.lastName,
       }));
+      hasPrefilled.current = true;
     }
   }, [session]);
 
