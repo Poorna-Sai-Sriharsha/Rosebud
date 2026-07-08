@@ -148,7 +148,7 @@ export default function CheckoutPage() {
       }
 
       const existing = JSON.parse(localStorage.getItem('rb-orders') ?? '[]');
-      localStorage.setItem('rb-orders', JSON.stringify([...existing, data.order.id]));
+      localStorage.setItem('rb-orders', JSON.stringify([data.order, ...existing]));
 
       setOrderPlaced(true);
       clearCart();
