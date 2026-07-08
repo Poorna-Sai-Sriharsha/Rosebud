@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
         if (!userExists) {
           validUserId = undefined; // Fallback: create order anonymously rather than crashing the DB
         }
-      } catch (e) {
+      } catch {
         validUserId = undefined;
       }
     }
