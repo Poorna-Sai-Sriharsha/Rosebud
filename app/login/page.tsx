@@ -2,14 +2,12 @@
 
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 
 export default function LoginPage() {
-  const router = useRouter();
   const [email, setEmail] = useState('demo@rosebud.com');
   const [password, setPassword] = useState('demo1234');
   const [error, setError] = useState('');
