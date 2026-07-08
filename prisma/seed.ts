@@ -26,6 +26,47 @@ async function main() {
       email: 'demo@rosebud.com',
       name: 'Demo User',
       password: hashedPassword,
+      orders: {
+        create: {
+          id: 'RB-1780000000000-DEMO01',
+          subtotal: 960000,
+          shippingCost: 0,
+          tax: 192000,
+          discount: 0,
+          total: 1152000,
+          status: 'delivered',
+          shippingAddress: JSON.stringify({
+            firstName: 'Demo',
+            lastName: 'User',
+            address1: '123 Luxury Lane',
+            city: 'Mumbai',
+            state: 'MH',
+            postalCode: '400001',
+            country: 'IN'
+          }),
+          shippingMethod: JSON.stringify({
+            id: 'standard',
+            name: 'Standard Delivery',
+            price: 0,
+            estimatedDays: '3-5 business days'
+          }),
+          estimatedDelivery: 'Wednesday, 1 July 2026',
+          items: {
+            create: [
+              {
+                productId: 'prod_001',
+                productName: 'Amber Solstice',
+                productSlug: 'amber-solstice-candle',
+                variantId: 'var_001_300g',
+                variantName: '300g / 65hr',
+                quantity: 2,
+                unitPrice: 480000,
+                imageUrl: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80'
+              }
+            ]
+          }
+        }
+      }
     },
   });
 
