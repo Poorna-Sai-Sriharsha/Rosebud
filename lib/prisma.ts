@@ -29,8 +29,8 @@ if (process.env.NODE_ENV === 'production' && (!dbUrl || dbUrl.includes('sqlite')
     }
   }
 
-  // Override Prisma's DB URL to point to the writable /tmp copy
-  dbUrl = `file:${tmpDbPath}`;
+  // Override Prisma's DB URL to point to the writable /tmp copy using an absolute URI
+  dbUrl = `file:///${tmpDbPath.replace(/^\//, '')}`;
 }
 
 const globalForPrisma = globalThis as unknown as {
