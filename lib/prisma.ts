@@ -14,11 +14,18 @@ if (process.env.NODE_ENV === 'production' && (!dbUrl || dbUrl.includes('sqlite')
   if (!fs.existsSync(tmpDbPath) && fs.existsSync(originalDbPath)) {
     try {
       fs.copyFileSync(originalDbPath, tmpDbPath);
-      // Vercel build files are read-only. We must make the copy writable so SQLite can insert orders!
-      fs.chmodSync(tmpDbPath, 0o666);
-      console.log('✅ Successfully copied SQLite DB to /tmp and made it writable for Vercel.');
+      console.log('✅ Successfully copied SQLite DB to /tmp for Vercel.');
     } catch (e) {
       console.error('❌ Failed to copy SQLite DB to /tmp:', e);
+    }
+  }
+
+  // Ensure it is writable every time the function boots
+  if (fs.existsSync(tmpDbPath)) {
+    try {
+      fs.chmodSync(tmpDbPath, 0o666);
+    } catch (e) {
+      console.error('❌ Failed to chmod SQLite DB:', e);
     }
   }
 
