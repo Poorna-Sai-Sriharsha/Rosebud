@@ -102,6 +102,10 @@ export async function POST(req: NextRequest) {
       include: { items: true },
     });
 
+    // Clear the Next.js cache for the account page so the new order appears instantly
+    const { revalidatePath } = require('next/cache');
+    revalidatePath('/account');
+
     return NextResponse.json({ order }, { status: 201 });
   } catch (err) {
     console.error('[POST /api/orders]', err);
