@@ -92,7 +92,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           href={props.href as string} 
           className={baseClass} 
           aria-disabled={isDisabled}
-          onClick={props.onClick as any}
+          onClick={props.onClick as React.MouseEventHandler<HTMLAnchorElement>}
         >
           {content}
         </Link>
