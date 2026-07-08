@@ -2,10 +2,6 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
-import Link from 'next/link';
-import { ShoppingBag, Package } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import { formatPrice } from '@/lib/products';
 import { OrderList } from './OrderList';
 import { SignOutButton } from './SignOutButton';
 
