@@ -6,7 +6,7 @@ import path from 'path';
 // Copy the seeded SQLite database to the writable /tmp directory on cold start.
 let dbUrl = process.env.DATABASE_URL;
 
-if (process.env.NODE_ENV === 'production' && (!dbUrl || dbUrl.includes('sqlite'))) {
+if (process.env.NODE_ENV === 'production' && (!dbUrl || dbUrl.includes('file:'))) {
   const tmpDbPath = '/tmp/dev.db';
   const originalDbPath = path.join(process.cwd(), 'prisma', 'dev.db');
 
