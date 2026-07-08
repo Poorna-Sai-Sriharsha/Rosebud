@@ -23,6 +23,7 @@ async function main() {
     where: { email: 'demo@rosebud.com' },
     update: {},
     create: {
+      id: 'clx0abcdefghijklmnopq1234',
       email: 'demo@rosebud.com',
       name: 'Demo User',
       password: hashedPassword,
