@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
+import { revalidatePath } from 'next/cache';
 import { authOptions } from '@/lib/auth';
 import { processMockPayment } from '@/lib/orders';
 import { prisma } from '@/lib/prisma';
@@ -103,7 +104,6 @@ export async function POST(req: NextRequest) {
     });
 
     // Clear the Next.js cache for the account page so the new order appears instantly
-    const { revalidatePath } = require('next/cache');
     revalidatePath('/account');
 
     return NextResponse.json({ order }, { status: 201 });
