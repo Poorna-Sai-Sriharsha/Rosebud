@@ -21,7 +21,7 @@ export default function LoginPage() {
     setError('');
 
     const res = await signIn('credentials', {
-      redirect: false,
+      redirect: false, // We still use false so we can catch and display errors
       email,
       password,
     });
@@ -29,9 +29,9 @@ export default function LoginPage() {
     if (res?.error) {
       setError('Invalid email or password');
       setLoading(false);
-    } else {
-      router.push('/account');
-      router.refresh();
+    } else if (res?.ok) {
+      // Use window.location for a hard navigation to guarantee the session is loaded
+      window.location.href = '/account';
     }
   };
 
