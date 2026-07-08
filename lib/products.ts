@@ -20,7 +20,7 @@ export const PRODUCTS: Product[] = [
     tags: ['amber', 'sandalwood', 'vanilla', 'warm', 'woody', 'bestseller'],
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80',
+        url: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80',
         alt: 'Amber Solstice candle in a frosted amber glass vessel',
         width: 800,
         height: 1000,
