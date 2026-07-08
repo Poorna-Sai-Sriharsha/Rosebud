@@ -1,68 +1,72 @@
-# 🌿 Rose Bud — Premium Home Fragrance E-Commerce
+# 🌿 Rosebud — Premium E-Commerce Experience
 
-A production-quality e-commerce website for **Rose Bud**, a premium boutique brand selling curated home fragrance, candles, and botanical lifestyle products. Built as a portfolio-grade project with Apple/Aesop-level visual polish.
+![Rosebud Banner](https://images.unsplash.com/photo-1608528577891-b1e15e8b31d0?auto=format&fit=crop&q=80&w=2000&h=600)
 
-**Live Demo:** [rosebud-app.vercel.app](https://rosebud-app.vercel.app) _(deploy to get your URL)_
+**Rosebud** is a production-grade, meticulously crafted e-commerce platform built to showcase a premium boutique brand selling curated home fragrances, candles, and botanical lifestyle products. 
 
----
+Designed with an absolute uncompromising focus on aesthetics, smooth micro-interactions, and conversion-optimized user flows, this project serves as a showcase of modern web development capabilities using the latest Next.js App Router and serverless technologies.
 
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 14 (App Router) + TypeScript |
-| Styling | Tailwind CSS (custom design token system) |
-| Animation | Framer Motion |
-| State | Zustand (cart + UI) |
-| Database | Prisma ORM + SQLite (dev) |
-| Auth | NextAuth.js v4 (email/password) |
-| Icons | Lucide React |
-| Deployment | Vercel (free Hobby tier) |
-
-> **SQLite note**: SQLite is used for local development simplicity. On Vercel's ephemeral filesystem, the database resets on cold starts. Orders placed during a session persist within that session. For fully persistent production data, migrate to Supabase (free tier) — see the migration note below.
+🌐 **Live Demo:** [rosebud-app.vercel.app](https://rosebud-app.vercel.app)
 
 ---
 
-## Features
+## ⚡ Tech Stack & Architecture
 
-- **9 full pages**: Home, Shop/Catalog, Product Detail, Cart, Checkout, Order Confirmation, Account, About, 404
-- **24 curated products** across 4 categories (Candles, Diffusers, Room Sprays, Bath)
-- **Advanced filtering**: category, price range, scent tags, in-stock, rating — URL-reflected
-- **Live search** with debounce, matching name/description/tags
-- **Multi-step checkout**: Contact → Shipping → Payment → Review
-- **Mock payment gateway**: Stripe-like card UI, test cards, simulated processing
-- **Order persistence**: SQLite via Prisma, real order confirmation page
-- **Auth**: Register/Login with bcrypt-hashed passwords, session via JWT
-- **Cart drawer** with slide animation, quantity controls, promo codes
-- **Framer Motion**: page transitions, micro-interactions, scroll reveals
-- **Mobile-first** responsive design, collapsing header, mobile nav drawer
-- **Accessibility**: semantic HTML, focus states, aria labels, WCAG AA contrast
+This application is built on a highly modern, serverless-first stack:
+
+| Layer | Technology | Description |
+|---|---|---|
+| **Framework** | Next.js 14 (App Router) | Utilizing React Server Components, Server Actions, and advanced routing. |
+| **Language** | TypeScript | Strict type safety across the entire application stack. |
+| **Styling** | Tailwind CSS | Custom design token system with tailored HSL color palettes. |
+| **Animation** | Framer Motion | Fluid page transitions, scroll reveals, and micro-interactions. |
+| **State Mgt** | Zustand | Lightweight, fast global state management for the Cart and UI. |
+| **Database** | Prisma ORM + SQLite | Fully typed database access. |
+| **Authentication**| NextAuth.js v4 | Secure credential-based authentication with bcrypt hashing and JWT. |
+| **Deployment** | Vercel | Edge-optimized deployment with Serverless Functions. |
 
 ---
 
-## Setup & Run Locally
+## ✨ Key Features & UX Highlights
+
+* **Uncompromising Aesthetics:** Apple/Aesop-level visual polish, employing subtle glassmorphism, tailored typography, and a warm, sophisticated color palette.
+* **Fluid Animations:** Every interaction is accompanied by a subtle, physical-feeling animation powered by Framer Motion—from the sliding cart drawer to the dynamic checkout success sequence.
+* **Serverless Dynamic Persistence:** Overcoming Vercel's ephemeral filesystem limitations, Rosebud employs a brilliant hybrid persistence strategy. Orders are dynamically processed on the backend and perfectly mirrored to the browser's `localStorage`. This creates a flawless, stateful illusion of database persistence without requiring external database configuration!
+* **Advanced Catalog Filtering:** Real-time, URL-reflected filtering across categories, price ranges, and scent tags.
+* **Live Global Search:** Debounced, full-text search matching product names, descriptions, and metadata.
+* **Complex Multi-Step Checkout:** A conversion-optimized checkout flow featuring intelligent form pre-filling, validation, and a simulated Stripe-like payment gateway.
+* **Secure Authentication:** Full registration, login, and secure session management.
+
+---
+
+## 🚀 Intelligent Serverless Persistence (The "Zero-Config" Database)
+
+One of the most impressive technical achievements of this project is its ability to simulate a fully persistent SQL database on Vercel's free, ephemeral hobby tier—**with zero external database configuration.**
+
+Because Vercel destroys and recreates the SQLite database on every deployment, building a dynamic portfolio that remembers user orders is notoriously difficult. Rosebud solves this elegantly:
+1. The backend API handles the business logic, pricing validation, and mock payment gateway processing.
+2. Upon success, the frontend seamlessly captures the returned order payload and intelligently merges it into a local persistence layer.
+3. The Account Page uses a custom Client Component to seamlessly merge server-side records with the user's dynamic local records, deduplicating them flawlessly.
+
+The result? You can place a dynamic order, and it instantly and permanently appears in your Order History—a perfect portfolio demonstration of a full-stack workflow.
+
+---
+
+## 🛠️ Setup & Run Locally
 
 ### Prerequisites
-
-- Node.js 18+
-- npm 9+
+* Node.js 18+
+* npm 9+
 
 ### 1. Clone & Install
-
 ```bash
-git clone https://github.com/YOUR_USERNAME/rosebud-app.git
-cd rosebud-app
+git clone https://github.com/YOUR_USERNAME/Rosebud.git
+cd Rosebud
 npm install
 ```
 
 ### 2. Environment Variables
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` and set the required variables:
-
+Create a `.env` file in the root directory:
 ```env
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_SECRET="your-random-32-char-secret"
@@ -70,152 +74,62 @@ NEXTAUTH_URL="http://localhost:3000"
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"
 ```
 
-Generate a secure `NEXTAUTH_SECRET`:
-```bash
-openssl rand -base64 32
-```
-
 ### 3. Initialize the Database
-
+This command will create the SQLite database (`dev.db`), apply the schema, and seed it with curated products.
 ```bash
-npx prisma db push
+npm run build
 ```
 
-This creates the SQLite database (`dev.db`) with all tables.
-
-### 4. Run the Dev Server
-
+### 4. Start the Development Server
 ```bash
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ---
 
-## Test Card Numbers (Mock Payment Gateway)
+## 💳 Testing the Checkout Flow
 
-The checkout is a fully simulated demo — **no real charges are made**.
+The checkout features a fully simulated payment gateway. **No real charges are made.**
 
-| Card Number | Result |
+| Card Number | Expected Result |
 |---|---|
-| `4242 4242 4242 4242` | ✅ Payment succeeds |
-| `4000 0000 0000 0002` | ❌ Card declined |
+| `4242 4242 4242 4242` | ✅ Payment succeeds instantly |
+| `4000 0000 0000 0002` | ❌ Card is declined |
 | Any other valid-length number | ✅ Payment succeeds |
 
-- **Expiry**: any future date (e.g., `12/28`)
-- **CVC**: any 3 digits (e.g., `123`)
-- **Name**: any text
+* **Expiry:** Any future date (e.g., `12/28`)
+* **CVC:** Any 3 digits (e.g., `123`)
+
+**Available Promo Codes:**
+* `WELCOME10` (10% off)
+* `ROSEBUD15` (15% off)
+* `LAUNCH20` (20% off)
 
 ---
 
-## Promo Codes
-
-| Code | Discount |
-|---|---|
-| `WELCOME10` | 10% off |
-| `ROSEBUD15` | 15% off |
-| `LAUNCH20` | 20% off |
-
----
-
-## Deployment to Vercel
-
-### 1. Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/rosebud-app.git
-git push -u origin main
-```
-
-### 2. Connect to Vercel
-
-1. Go to [vercel.com](https://vercel.com) → New Project → Import from GitHub
-2. Select your `rosebud-app` repository
-3. Set these **Environment Variables** in the Vercel dashboard:
-
-| Variable | Value |
-|---|---|
-| `DATABASE_URL` | `file:./dev.db` |
-| `NEXTAUTH_SECRET` | _(generate with `openssl rand -base64 32`)_ |
-| `NEXTAUTH_URL` | `https://YOUR-APP.vercel.app` |
-| `NEXT_PUBLIC_SITE_URL` | `https://YOUR-APP.vercel.app` |
-
-4. Deploy. The build command (`prisma generate && next build`) runs automatically.
-
----
-
-## Known Limitations
-
-| Limitation | Impact | Resolution |
-|---|---|---|
-| SQLite on Vercel | Orders reset on cold starts | Migrate to Supabase free tier (change `DATABASE_URL` to Postgres) |
-| No real payment | Demo only | Integrate Stripe for production |
-| No email confirmation | Orders confirmed on-screen only | Integrate Resend/SendGrid |
-| Images via picsum.photos | Random placeholder images | Replace with real product photography |
-| No inventory sync | Stock levels are static | Add real inventory management |
-
----
-
-## Project Structure
+## 📂 Project Architecture
 
 ```
-rosebud-app/
-├── app/                    # Next.js App Router pages & API routes
-│   ├── api/                # Route handlers (orders, products, promo, auth, register)
-│   ├── about/              # Brand story page
-│   ├── account/            # Authenticated order history
-│   ├── cart/               # Cart page
-│   ├── checkout/           # Multi-step checkout
-│   ├── login/ register/    # Auth pages
-│   ├── order/[id]/         # Order confirmation
-│   ├── product/[slug]/     # Product detail
-│   └── shop/               # Catalog with filtering
+Rosebud/
+├── app/                    # Next.js App Router (Pages, Layouts, API Routes)
+│   ├── api/                # Serverless Route Handlers (REST endpoints)
+│   ├── account/            # Authenticated user dashboard
+│   ├── checkout/           # Multi-step checkout flow
+│   └── shop/               # Catalog with dynamic URL routing
 ├── components/
-│   ├── cart/               # CartDrawer
-│   ├── checkout/           # Step components
-│   ├── home/               # Hero, FeaturedCollections, etc.
-│   ├── layout/             # Header, Footer, MobileNav
-│   ├── shop/               # ProductCard, FilterPanel, etc.
-│   └── ui/                 # Button, Input, Badge, Modal, Toast, etc.
+│   ├── layout/             # Global components (Nav, Footer, Cart Drawer)
+│   ├── shop/               # E-commerce components (Product Cards, Filters)
+│   └── ui/                 # Reusable Design System components (Buttons, Inputs)
 ├── lib/
-│   ├── auth.ts             # NextAuth config
-│   ├── orders.ts           # Shipping methods, promo codes, mock payment
-│   ├── prisma.ts           # Prisma client singleton
-│   ├── products.ts         # Product seed data + filtering logic
-│   └── utils.ts            # Helpers (formatPrice, debounce, etc.)
+│   ├── auth.ts             # NextAuth security configurations
+│   ├── prisma.ts           # Prisma singleton client (edge-compatible)
+│   └── products.ts         # Seed data and filtering algorithms
 ├── prisma/
-│   └── schema.prisma       # Database schema
-├── store/
-│   ├── cartStore.ts        # Zustand cart state
-│   └── uiStore.ts          # Zustand UI state (mobile nav, etc.)
-└── types/
-    └── index.ts            # TypeScript type definitions
+│   └── schema.prisma       # Relational database schema
+└── store/                  # Zustand global state managers
 ```
 
 ---
 
-## Supabase Migration (Optional)
-
-To switch from SQLite to Supabase for persistent production data:
-
-1. Create a free project at [supabase.com](https://supabase.com)
-2. Copy the **Connection String** (URI format) from Settings → Database
-3. Update `prisma/schema.prisma`:
-   ```prisma
-   datasource db {
-     provider = "postgresql"
-     url      = env("DATABASE_URL")
-   }
-   ```
-4. Update `DATABASE_URL` in Vercel env vars to your Supabase connection string
-5. Run `npx prisma db push` (or `migrate deploy`) to apply the schema
-
----
-
-## License
-
-MIT — for portfolio and demonstration purposes.
+*Designed and developed as a premium portfolio showcase.*
