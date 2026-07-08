@@ -6,7 +6,7 @@
 
 Designed with an absolute uncompromising focus on aesthetics, smooth micro-interactions, and conversion-optimized user flows, this project serves as a showcase of modern web development capabilities using the latest Next.js App Router and serverless technologies.
 
-🌐 **Live Demo:** [rosebud-app.vercel.app](https://rosebud-app.vercel.app)
+🌐 **Live Demo:** [rosebudessence.vercel.app](https://rosebudessence.vercel.app)
 
 ---
 
@@ -60,8 +60,8 @@ The result? You can place a dynamic order, and it instantly and permanently appe
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/Rosebud.git
-cd Rosebud
+git clone https://github.com/Poorna-Sai-Sriharsha/Rosebud.git
+cd Rosebud/rosebud-app
 npm install
 ```
 
