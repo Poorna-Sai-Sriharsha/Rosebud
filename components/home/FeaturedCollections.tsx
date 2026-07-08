@@ -12,9 +12,9 @@ const CATEGORY_IMAGES: Record<string, string> = {
     'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80',
   diffusers:
     'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80',
-  bath: 'https://images.unsplash.com/photo-1605814515250-719543e30f14?auto=format&fit=crop&q=80',
+  bath: 'https://images.unsplash.com/photo-1583248352195-d3a8e766edf2?auto=format&fit=crop&q=80',
   'room-sprays':
-    'https://images.unsplash.com/photo-1608528577891-eb0558ebda3c?auto=format&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80',
 };
 
 const CATEGORIES = [

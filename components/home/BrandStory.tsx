@@ -22,7 +22,7 @@ export function BrandStory() {
               {/* Main image */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1595425881477-83ebad616149?auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80"
                   alt="Artisan hands pouring rose petal candle wax in a sunlit workshop"
                   fill
                   className="object-cover"
