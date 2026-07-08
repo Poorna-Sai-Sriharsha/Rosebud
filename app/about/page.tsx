@@ -13,7 +13,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/about/1600/900"
+          src="https://images.unsplash.com/photo-1583248352195-d3a8e766edf2?auto=format&fit=crop&q=80"
           alt="Sunlit workshop with botanicals and candle-making equipment"
           fill
           className="object-cover"

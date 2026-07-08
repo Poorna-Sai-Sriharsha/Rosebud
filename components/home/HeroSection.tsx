@@ -104,7 +104,7 @@ export function HeroSection() {
           className="relative lg:h-[640px] h-80 rounded-3xl overflow-hidden"
         >
           <Image
-            src="https://picsum.photos/seed/hero/1200/900"
+            src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80"
             alt="Rose Bud candle on marble surface with botanicals"
             fill
             className="object-cover"

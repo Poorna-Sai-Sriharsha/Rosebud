@@ -22,7 +22,7 @@ export function BrandStory() {
               {/* Main image */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden">
                 <Image
-                  src="https://picsum.photos/seed/brand1/800/800"
+                  src="https://images.unsplash.com/photo-1595425881477-83ebad616149?auto=format&fit=crop&q=80"
                   alt="Artisan hands pouring rose petal candle wax in a sunlit workshop"
                   fill
                   className="object-cover"
@@ -32,7 +32,7 @@ export function BrandStory() {
               {/* Floating accent image */}
               <div className="absolute -bottom-6 -right-6 w-44 h-52 rounded-2xl overflow-hidden border-4 border-warm-950 shadow-2xl">
                 <Image
-                  src="https://picsum.photos/seed/brand2/800/800"
+                  src="https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&q=80"
                   alt="Rose petals and botanical ingredients"
                   fill
                   className="object-cover"

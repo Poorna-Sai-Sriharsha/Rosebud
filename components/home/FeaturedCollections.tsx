@@ -9,12 +9,12 @@ import { ArrowRight } from 'lucide-react';
 
 const CATEGORY_IMAGES: Record<string, string> = {
   candles:
-    'https://picsum.photos/seed/cat-candles/800/1000',
+    'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80',
   diffusers:
-    'https://picsum.photos/seed/cat-diffusers/800/1000',
-  bath: 'https://picsum.photos/seed/cat-bath/800/1000',
+    'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80',
+  bath: 'https://images.unsplash.com/photo-1605814515250-719543e30f14?auto=format&fit=crop&q=80',
   'room-sprays':
-    'https://picsum.photos/seed/cat-sprays/800/1000',
+    'https://images.unsplash.com/photo-1608528577891-eb0558ebda3c?auto=format&fit=crop&q=80',
 };
 
 const CATEGORIES = [

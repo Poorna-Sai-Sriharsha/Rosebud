@@ -20,19 +20,19 @@ export const PRODUCTS: Product[] = [
     tags: ['amber', 'sandalwood', 'vanilla', 'warm', 'woody', 'bestseller'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product1/800/1000',
+        url: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80',
         alt: 'Amber Solstice candle in a frosted amber glass vessel',
         width: 800,
         height: 1000,
       },
       {
-        url: 'https://picsum.photos/seed/product2/800/1000',
+        url: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80',
         alt: 'Candle burning with warm glow on a marble surface',
         width: 800,
         height: 1000,
       },
       {
-        url: 'https://picsum.photos/seed/product3/800/1000',
+        url: 'https://images.unsplash.com/photo-1605814515250-719543e30f14?auto=format&fit=crop&q=80',
         alt: 'Close-up of candle wick and melted wax pool',
         width: 800,
         height: 1000,
@@ -74,13 +74,13 @@ export const PRODUCTS: Product[] = [
     tags: ['rose', 'vetiver', 'cedar', 'earthy', 'floral', 'smoky'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product4/800/1000',
+        url: 'https://images.unsplash.com/photo-1608528577891-eb0558ebda3c?auto=format&fit=crop&q=80',
         alt: 'Rose & Vetiver candle in a cream ceramic vessel with rose petal',
         width: 800,
         height: 1000,
       },
       {
-        url: 'https://picsum.photos/seed/product5/800/1000',
+        url: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80',
         alt: 'Candle lifestyle shot with dried roses and linen',
         width: 800,
         height: 1000,
@@ -118,7 +118,7 @@ export const PRODUCTS: Product[] = [
     tags: ['vetiver', 'moss', 'petrichor', 'earthy', 'fresh', 'green'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product6/800/1000',
+        url: 'https://images.unsplash.com/photo-1583248352195-d3a8e766edf2?auto=format&fit=crop&q=80',
         alt: 'Forest moss candle in dark green ceramic',
         width: 800,
         height: 1000,
@@ -151,7 +151,7 @@ export const PRODUCTS: Product[] = [
     tags: ['neroli', 'orange blossom', 'musk', 'citrus', 'clean', 'fresh'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product7/800/1000',
+        url: 'https://images.unsplash.com/photo-1616147424911-c918ff0fccfc?auto=format&fit=crop&q=80',
         alt: 'White Neroli candle in white porcelain with orange blossom sprig',
         width: 800,
         height: 1000,
@@ -182,7 +182,7 @@ export const PRODUCTS: Product[] = [
     tags: ['fig', 'oud', 'resin', 'dark', 'warm', 'luxury'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product8/800/1000',
+        url: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80',
         alt: 'Dark fig candle in an obsidian black vessel',
         width: 800,
         height: 1000,
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
     tags: ['linen', 'aldehydic', 'musk', 'clean', 'fresh', 'airy'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product9/800/1000',
+        url: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80',
         alt: 'Linen Air candle in white ribbed glass with minimal label',
         width: 800,
         height: 1000,
@@ -242,7 +242,7 @@ export const PRODUCTS: Product[] = [
     tags: ['peony', 'cashmere', 'floral', 'musk', 'soft', 'feminine'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product10/800/1000',
+        url: 'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80',
         alt: 'Peony Cashmere candle in blush pink frosted glass',
         width: 800,
         height: 1000,
@@ -273,7 +273,7 @@ export const PRODUCTS: Product[] = [
     tags: ['tobacco', 'honey', 'tonka', 'warm', 'sweet', 'gourmand'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product11/800/1000',
+        url: 'https://images.unsplash.com/photo-1512413346513-5a0225d3dfdf?auto=format&fit=crop&q=80',
         alt: 'Tobacco & Honey candle in cognac glass vessel',
         width: 800,
         height: 1000,
@@ -305,7 +305,7 @@ export const PRODUCTS: Product[] = [
     tags: ['amber', 'sandalwood', 'vanilla', 'warm', 'woody'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product12/800/1000',
+        url: 'https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&q=80',
         alt: 'Amber Solstice diffuser in hand-blown amber glass bottle with rattan reeds',
         width: 800,
         height: 1000,
@@ -342,7 +342,7 @@ export const PRODUCTS: Product[] = [
     tags: ['hinoki', 'cedar', 'yuzu', 'clean', 'woody', 'spa'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product13/800/1000',
+        url: 'https://images.unsplash.com/photo-1615397323049-5ebbbdf49c40?auto=format&fit=crop&q=80',
         alt: 'Hinoki Cedar diffuser on stone bathroom shelf',
         width: 800,
         height: 1000,
@@ -372,7 +372,7 @@ export const PRODUCTS: Product[] = [
     tags: ['rose', 'oud', 'luxury', 'floral', 'dark', 'opulent'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product14/800/1000',
+        url: 'https://images.unsplash.com/photo-1595425881477-83ebad616149?auto=format&fit=crop&q=80',
         alt: 'Rose Oud diffuser in dark sculptural vessel',
         width: 800,
         height: 1000,
@@ -402,7 +402,7 @@ export const PRODUCTS: Product[] = [
     tags: ['bergamot', 'mint', 'green tea', 'fresh', 'citrus', 'energising'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product15/800/1000',
+        url: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&q=80',
         alt: 'Bergamot Mint diffuser in clear glass on white desk',
         width: 800,
         height: 1000,
@@ -432,7 +432,7 @@ export const PRODUCTS: Product[] = [
     tags: ['vanilla', 'tonka', 'warm', 'sweet', 'cosy', 'gourmand'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product16/800/1000',
+        url: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&q=80',
         alt: 'Vanilla Tonka diffuser on bedside table with candle',
         width: 800,
         height: 1000,
@@ -461,7 +461,7 @@ export const PRODUCTS: Product[] = [
     tags: ['lavender', 'cistus', 'floral', 'herbal', 'calming', 'sleep'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product17/800/1000',
+        url: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80',
         alt: 'Lavender Cistus diffuser with dried lavender bundle',
         width: 800,
         height: 1000,
@@ -493,7 +493,7 @@ export const PRODUCTS: Product[] = [
     tags: ['amber', 'sandalwood', 'vanilla', 'warm', 'woody'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product18/800/1000',
+        url: 'https://images.unsplash.com/photo-1605814515250-719543e30f14?auto=format&fit=crop&q=80',
         alt: 'Amber room spray in amber glass atomiser bottle',
         width: 800,
         height: 1000,
@@ -528,7 +528,7 @@ export const PRODUCTS: Product[] = [
     tags: ['white tea', 'orris', 'iris', 'clean', 'powdery', 'delicate'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product19/800/1000',
+        url: 'https://images.unsplash.com/photo-1608528577891-eb0558ebda3c?auto=format&fit=crop&q=80',
         alt: 'White Tea Orris room spray in pale frosted glass atomiser',
         width: 800,
         height: 1000,
@@ -558,7 +558,7 @@ export const PRODUCTS: Product[] = [
     tags: ['cedar', 'sage', 'eucalyptus', 'fresh', 'woody', 'cleansing'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product20/800/1000',
+        url: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80',
         alt: 'Cedar Sage room spray on wooden surface with sage bundle',
         width: 800,
         height: 1000,
@@ -587,7 +587,7 @@ export const PRODUCTS: Product[] = [
     tags: ['jasmine', 'neroli', 'bergamot', 'floral', 'fresh', 'radiant'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product21/800/1000',
+        url: 'https://images.unsplash.com/photo-1583248352195-d3a8e766edf2?auto=format&fit=crop&q=80',
         alt: 'Jasmine Neroli room spray in clear glass on sun-dappled surface',
         width: 800,
         height: 1000,
@@ -616,7 +616,7 @@ export const PRODUCTS: Product[] = [
     tags: ['petrichor', 'rain', 'moss', 'earthy', 'fresh', 'unique'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product22/800/1000',
+        url: 'https://images.unsplash.com/photo-1616147424911-c918ff0fccfc?auto=format&fit=crop&q=80',
         alt: 'Petrichor room spray in dark slate-grey bottle',
         width: 800,
         height: 1000,
@@ -648,7 +648,7 @@ export const PRODUCTS: Product[] = [
     tags: ['bath', 'salts', 'lavender', 'rose', 'botanical', 'relaxing'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product23/800/1000',
+        url: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80',
         alt: 'Pink botanical bath salts in a white ceramic dish with rose petals',
         width: 800,
         height: 1000,
@@ -689,7 +689,7 @@ export const PRODUCTS: Product[] = [
     tags: ['body oil', 'rose', 'marula', 'rosehip', 'nourishing', 'luxury'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product24/800/1000',
+        url: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80',
         alt: 'Rose Body Oil in amber dropper bottle with rose petals',
         width: 800,
         height: 1000,
@@ -729,7 +729,7 @@ export const PRODUCTS: Product[] = [
     tags: ['face mask', 'clay', 'rose', 'cleansing', 'botanical', 'skincare'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product25/800/1000',
+        url: 'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80',
         alt: 'Botanical clay mask powder in white ceramic pot',
         width: 800,
         height: 1000,
@@ -765,7 +765,7 @@ export const PRODUCTS: Product[] = [
     tags: ['sleep', 'pillow mist', 'lavender', 'chamomile', 'calming', 'night'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product26/800/1000',
+        url: 'https://images.unsplash.com/photo-1512413346513-5a0225d3dfdf?auto=format&fit=crop&q=80',
         alt: 'Pillow mist spray on linen bed in candlelit bedroom',
         width: 800,
         height: 1000,
@@ -800,13 +800,13 @@ export const PRODUCTS: Product[] = [
     tags: ['gift', 'discovery', 'set', 'miniature', 'multi-scent', 'bestseller'],
     images: [
       {
-        url: 'https://picsum.photos/seed/product27/800/1000',
+        url: 'https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&q=80',
         alt: 'Discovery Set — five miniature candles in a luxury gift box',
         width: 800,
         height: 1000,
       },
       {
-        url: 'https://picsum.photos/seed/product28/800/1000',
+        url: 'https://images.unsplash.com/photo-1615397323049-5ebbbdf49c40?auto=format&fit=crop&q=80',
         alt: 'Close up of candle miniatures',
         width: 800,
         height: 1000,
