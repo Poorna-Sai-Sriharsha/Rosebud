@@ -1,0 +1,8 @@
+{
+  "buildCommand": "prisma generate && next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "NEXTAUTH_URL": "@nextauth-url"
+  }
+}
