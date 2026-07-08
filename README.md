@@ -1,6 +1,6 @@
 # 🌿 Rosebud — Premium E-Commerce Experience
 
-![Rosebud Banner](https://images.unsplash.com/photo-1608528577891-b1e15e8b31d0?auto=format&fit=crop&q=80&w=2000&h=600)
+![Rosebud Banner](RoseBud.png)
 
 **Rosebud** is a production-grade, meticulously crafted e-commerce platform built to showcase a premium boutique brand selling curated home fragrances, candles, and botanical lifestyle products. 
 
